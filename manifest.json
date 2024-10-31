@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "Real-Debrid Link Extractor",
+  "version": "1.0.7",
+  "description": "Extrait les liens de téléchargement Real-Debrid",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "clipboardWrite"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "19": "icons/icon19.png",
+      "32": "icons/icon38.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "19": "icons/icon19.png",
+    "32": "icons/icon38.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://real-debrid.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
